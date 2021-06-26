@@ -1,4 +1,4 @@
-import logger from '../logging/logger';
+const logger = require('../logging/logger');
 
 const errorHandlers = {
   errorHandler(err, req, res, next) {
