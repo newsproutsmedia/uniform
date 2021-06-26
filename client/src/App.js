@@ -4,8 +4,8 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  const hitBackend = () => {
-    axios.get('/test')
+  const hitBackend = (url) => {
+    axios.get(url)
       .then((response) => {
         console.log(response.data);
       });
@@ -20,7 +20,8 @@ function App() {
           <code> src/App.js </code>
           and save to reload.
         </p>
-        <button onClick={hitBackend} type="button">Send request</button>
+        <button onClick={() => hitBackend('/test')} type="button">Hit &quot;/test&quot; on backend</button>
+        <button onClick={() => hitBackend('/errorHandler')} type="button">Hit &quot;/errorHandler&quot; on backend</button>
       </header>
 
     </div>
