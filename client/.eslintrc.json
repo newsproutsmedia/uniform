@@ -21,6 +21,6 @@
     ],
     "rules": {
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-        "object-curly-newline": ["error", { "ImportDeclaration": "always" }]
+        "object-curly-newline": ["error", { "consistent": true }]
     }
 }
