@@ -30,21 +30,21 @@ jobs:
           # Name attribute provides useful organization information when returning errors, warnings or output
           name: Install server dependencies
           # The command to execute.
-          command: npm setup:server --verbose
+          command: npm run setup:server --verbose
 
       # Execute a command. The simple for is `run: npm install --verbose`
       - run:
           # Name attribute provides useful organization information when returning errors, warnings or output
           name: Install client dependencies
           # The command to execute.
-          command: npm setup:client --verbose
+          command: npm run setup:client --verbose
 
       # Execute the client build command
       - run:
           # Name attribute provides useful organization information when returning errors, warnings or output
           name: Build client
           # The command to execute.
-          command: npm build:client --verbose
+          command: npm run build:client --verbose
 
       # Persist some data to cache which can be used in subsequent builds.
       # For guidebook, node_modules is cached. This makes subsequent build runs faster if package.json is unchanged
@@ -57,10 +57,10 @@ jobs:
       - run:
           name: Run server tests
           # When running Jest tests, please use the --runInBand flag: https://circleci.com/docs/2.0/collect-test-data/#jest
-          command: npm test:server -- --runInBand --forceExit
+          command: npm run test:server -- --runInBand --forceExit
 
       - run:
           name: Run client tests
           # When running Jest tests, please use the --runInBand flag: https://circleci.com/docs/2.0/collect-test-data/#jest
-          command: npm test:client -- --runInBand --forceExit
+          command: npm run test:client -- --runInBand --forceExit
 
