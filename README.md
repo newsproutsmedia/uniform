@@ -1,4 +1,4 @@
-# React App With Express Backend Template
+# React App With Express Backend Starter
 A starter template for creating React applications with a Node/Express backend. Includes frontend and backend tests, as well as Winston/Morgan logging of API routes and errors, and CircleCI config, and Heroku deployment. Client built with create-react-app.
 
 ## Installation
