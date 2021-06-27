@@ -2,6 +2,7 @@
   "name": "react-app-express-client",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://react-app-express.herokuapp.com/",
   "description": "Client directory for React app with Express backend template",
   "keywords": [
     "node",

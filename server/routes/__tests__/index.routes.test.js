@@ -22,17 +22,16 @@ describe('GET /api/test', () => {
 
 describe('POST /api/message', () => {
   it('should respond with 200 status and return json', (done) => {
-    const testMessage = {message: "test"};
+    const testMessage = { message: 'test' };
     request(app)
       .post('/api/message')
       .send(testMessage)
       .set('Accept', 'application/json')
       .expect('Content-Type', /json/)
       .expect(200)
-      .end(function(err, res) {
+      .end((err, res) => {
         if (err) return done(err);
         return done();
       });
   });
 });
-
