@@ -3,7 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "description": "Client directory for React app with Express backend template",
-  "keywords": ["node", "express"],
+  "keywords": [
+    "node",
+    "express"
+  ],
   "author": "NB Walters",
   "license": "ISC",
   "dependencies": {

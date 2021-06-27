@@ -1,15 +1,33 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  const hitBackend = (url) => {
-    axios.get(url)
+  const [welcome, setWelcome] = useState();
+  const [post, setPost] = useState();
+  const [responseToPost, setResponseToPost] = useState();
+
+  const getBackend = async (url) => {
+    await axios.get(url)
       .then((response) => {
-        console.log(response.data);
+        setWelcome(response.data);
       });
   };
+
+  const postToBackend = async (e) => {
+    e.preventDefault();
+    const postMessage = { message: post };
+    await axios.post('/api/message', postMessage)
+      .then((response) => setResponseToPost(response.data.message))
+      .catch((error) => {
+        setResponseToPost(error.message);
+      });
+  };
+
+  useEffect(() => {
+    getBackend('/api/test/');
+  }, [welcome]);
 
   return (
     <div className="App">
@@ -21,7 +39,20 @@ function App() {
           <code> src/App.js </code>
           and save to reload.
         </p>
-        <button onClick={() => hitBackend('/test')} type="button">Hit &quot;/test&quot; on backend</button>
+        <p>{welcome}</p>
+        <form onSubmit={postToBackend}>
+          <label htmlFor="postInput">
+            Send POST Request To Server:
+            <input
+              id="postInput"
+              type="text"
+              value={post}
+              onChange={(e) => setPost(e.target.value)}
+            />
+          </label>
+          <button type="submit">SEND</button>
+        </form>
+        <p>{responseToPost}</p>
       </header>
 
     </div>

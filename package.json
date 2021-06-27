@@ -4,14 +4,14 @@
     "description": "Template for React app with Express backend",
     "main": "server/server.js",
     "scripts": {
-      "start": "npm run server",
+      "start": "node server/server.js",
       "server": "cd server && npm run server",
       "client": "cd client && npm run start",
       "build:client": "cd client && npm run build",
-      "iall": "npm i && cd client && npm i",
       "startboth": "npm run server & npm run client",
       "test:server": "cd server && npm run test",
-      "test:client": "cd client && npm run test"
+      "test:client": "cd client && npm run test",
+      "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
     },
     "keywords": ["node", "express", "react", "react-with-express"],
     "author": "NB Walters",

@@ -13,7 +13,10 @@
     "server": "node server.js",
     "test": "jest"
   },
-  "keywords": ["node", "express"],
+  "keywords": [
+    "node",
+    "express"
+  ],
   "author": "NB Walters",
   "license": "ISC",
   "dependencies": {
