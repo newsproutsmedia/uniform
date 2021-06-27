@@ -23,10 +23,9 @@ A number of useful scripts are included in the root package.json file:
 ## A Note About Tests
 Make sure to run ```npm run build:client``` from the project root *before* running your server tests, or any routes returning html pages will fail -- can't test what isn't there!
 
-## When Deploying
-Add a "post build" script that triggers the client to be built.  
+## Deploying To Heroku
+Because the React App is served up by Express via the client's "build" folder, the client must be built AFTER deployment. To accomplish this, a "post build" script that triggers the client dependencies to be installed and the client to be built has been included.  
 
-For example, if deploying to Heroku:  
 ```
-"heroku-postbuild": "npm run setup:client && npm install --only=dev --no-shrinkwrap && npm run build"
+"heroku-postbuild": "npm run setup:client && npm run setup:client-dev && npm run build:client"
 ```
