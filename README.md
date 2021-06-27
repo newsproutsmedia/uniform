@@ -27,12 +27,11 @@ Make sure to run ```npm run build:client``` from the project root *before* runni
 Heroku automatically installs all dependencies listed in the package.json file located in the project's root directory. However, in order to prevent dependency conflicts, the server and client have been placed in their own adjacent directories. In addition, since the React App is served up by Express via the client's "build" folder, the client must be built AFTER deployment. To accomplish all this, a "post build" script has been included:
 
 ```
-"heroku-postbuild": "npm run setup:server && npm run prune:server && npm run setup:client && npm run setup:client-dev && npm run build:client"
+"heroku-postbuild": "npm run setup:server && npm run prune:server && npm run setup:client && npm run build:client"
 ```
 
 This script will:
 1. Install server dependencies
 2. Remove server devDependencies
 3. Setup client dependencies
-4. Setup client devDependencies
-5. Build the client
+4. Build the client
