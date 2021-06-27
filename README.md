@@ -12,4 +12,5 @@ A number of useful scripts are included in the root package.json file:
 - "build:client": builds only the client
 - "iall": installs a dependency in both server and client
 - "startboth": starts both server and client
-- "test": runs Jest tests
+- "test:server": runs SuperTest tests on server APIs
+- "test:client": runs Jest tests on client

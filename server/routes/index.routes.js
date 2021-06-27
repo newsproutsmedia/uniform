@@ -8,12 +8,8 @@ module.exports = (app) => {
     res.status(200).send('Welcome to the backend!');
   });
 
-  // testing to make sure the error handler works
-  app.get('/errorHandler', (req, res, next) => {
-    try {
-      throw new Error('Error!');
-    } catch (error) {
-      next(error);
-    }
+  // All other GET requests not handled before will return our React app
+  app.get('*', (req, res) => {
+    res.status(404).send('Not Found');
   });
 };

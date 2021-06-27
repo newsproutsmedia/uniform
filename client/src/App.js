@@ -15,13 +15,13 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <h1>Welcome To React</h1>
         <p>
           Edit
           <code> src/App.js </code>
           and save to reload.
         </p>
         <button onClick={() => hitBackend('/test')} type="button">Hit &quot;/test&quot; on backend</button>
-        <button onClick={() => hitBackend('/errorHandler')} type="button">Hit &quot;/errorHandler&quot; on backend</button>
       </header>
 
     </div>

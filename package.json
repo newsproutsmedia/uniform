@@ -1,32 +1,20 @@
 {
-  "name": "react-app-express",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server/index.js",
-  "scripts": {
-    "server": "node server/index.js",
-    "client": "cd client && npm run start",
-    "build:client": "cd client && npm run build",
-    "iall": "npm i && cd client && npm i",
-    "startboth": "npm run server & npm run client",
-    "test": "jest"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "axios": "^0.21.1",
-    "express": "^4.17.1",
-    "morgan": "^1.10.0",
-    "morgan-json": "^1.1.0",
-    "winston": "^3.3.3"
-  },
-  "devDependencies": {
-    "eslint": "^7.29.0",
-    "eslint-config-airbnb": "^18.2.1",
-    "eslint-plugin-import": "^2.23.4",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-react": "^7.24.0",
-    "eslint-plugin-react-hooks": "^4.2.0"
+    "name": "react-app-express",
+    "version": "1.0.0",
+    "description": "Template for React app with Express backend",
+    "main": "server/server.js",
+    "scripts": {
+      "start": "npm run server",
+      "server": "cd server && npm run server",
+      "client": "cd client && npm run start",
+      "build:client": "cd client && npm run build",
+      "iall": "npm i && cd client && npm i",
+      "startboth": "npm run server & npm run client",
+      "test:server": "cd server && npm run test",
+      "test:client": "cd client && npm run test"
+    },
+    "keywords": ["node", "express", "react", "react-with-express"],
+    "author": "NB Walters",
+    "license": "ISC"
   }
-}
+  
