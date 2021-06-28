@@ -1,30 +1,56 @@
-import React from 'react';
-import theme from './theme';
+import React, { useState } from 'react';
+import {
+  Box,
+  Button,
+  Grommet,
+  Layer,
+  ResponsiveContext,
+} from 'grommet';
+import { FormClose } from 'grommet-icons';
 import NavBar from './components/navigation/NavBar';
-import Introduction from './components/text/Introduction';
-import DataSection from './components/data/DataSection';
-import SignupSection from './components/signup/SignupSection';
-import Footer from './components/navigation/Footer';
+import theme from './theme';
 
 function App() {
-  const appStyle = {
-    backgroundColor: theme.white,
-    minHeight: '100vh',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    color: theme.grey,
-  };
-
+  const [showMenu, setShowMenu] = useState();
   return (
-    <div id="app" data-testid="app" style={appStyle}>
-      <NavBar />
-      <Introduction />
-      <DataSection />
-      <SignupSection />
-      <Footer />
-    </div>
+    <Grommet theme={theme} full>
+      <ResponsiveContext.Consumer>
+        {() => (
+          <Box background="white" fill>
+            <NavBar menu={showMenu} setMenuState={setShowMenu} />
+            <Box direction="row" flex overflow={{ horizontal: 'hidden' }}>
+              <Box flex align="center" justify="center">
+                app body
+              </Box>
+              {showMenu && (
+                <Layer full>
+                  <Box
+                    background="light-2"
+                    tag="header"
+                    justify="end"
+                    align="center"
+                    direction="row"
+                  >
+                    <Button
+                      icon={<FormClose />}
+                      onClick={() => setShowMenu(false)}
+                    />
+                  </Box>
+                  <Box
+                    fill
+                    background="light-2"
+                    align="center"
+                    justify="center"
+                  >
+                    menu
+                  </Box>
+                </Layer>
+              )}
+            </Box>
+          </Box>
+        )}
+      </ResponsiveContext.Consumer>
+    </Grommet>
   );
 }
 
