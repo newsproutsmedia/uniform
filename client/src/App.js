@@ -25,6 +25,10 @@ function App() {
       });
   };
 
+  const handleInputChange = (e) => {
+    setPost(e.target.value);
+  };
+
   useEffect(() => {
     getBackend('/api/test/');
   }, [welcome]);
@@ -47,7 +51,7 @@ function App() {
               id="postInput"
               type="text"
               value={post}
-              onChange={(e) => setPost(e.target.value)}
+              onChange={handleInputChange}
             />
           </label>
           <button type="submit">SEND</button>
