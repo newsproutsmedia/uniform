@@ -19,11 +19,11 @@ function App() {
 
   return (
     <div id="app" data-testid="app" style={appStyle}>
-      <NavBar/>
-      <Introduction/>
-      <DataSection/>
-      <SignupSection/>
-      <Footer/>
+      <NavBar />
+      <Introduction />
+      <DataSection />
+      <SignupSection />
+      <Footer />
     </div>
   );
 }
