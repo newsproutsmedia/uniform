@@ -6,8 +6,3 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizelegibility;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
