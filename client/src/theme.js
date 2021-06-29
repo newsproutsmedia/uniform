@@ -15,6 +15,11 @@ const theme = {
       white: '#ffffff',
     },
   },
+  formField: {
+    border: {
+      position: 'none',
+    },
+  },
 };
 
 module.exports = theme;

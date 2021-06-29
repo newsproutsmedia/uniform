@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 import {
   Box,
-  Button,
   Grommet,
   Heading,
   ResponsiveContext,
 } from 'grommet';
-import { Google } from 'grommet-icons';
 import { Helmet } from 'react-helmet';
 import MenuOverlay from './components/navigation/MenuOverlay';
 import NavBar from './components/navigation/NavBar';
@@ -25,6 +23,8 @@ import TotalPositive from './components/calculator/TotalPositive';
 import TotalNegative from './components/calculator/TotalNegative';
 import Spacer from './components/calculator/Spacer';
 import TotalNPS from './components/calculator/TotalNPS';
+import SignupForm from './components/signup/SignupForm';
+import SocialIcons from './components/signup/SocialIcons';
 
 function App() {
   const [showMenu, setShowMenu] = useState();
@@ -178,21 +178,8 @@ function App() {
                   justify="top"
                 >
                   <Heading level="2" textAlign="center" style={{ fontWeight: '400', fontSize: '30px' }}>Interested in improving your customer experience with NPS?</Heading>
-                  <Box
-                    direction="row"
-                    justify="center"
-                  >
-                    <Button
-                      icon={<Google />}
-                      label="Sign up with Google"
-                      gap="small"
-                      pad={{ vertical: '10px', horizontal: '10px' }}
-                      background="#ffffff"
-                      style={{
-                        border: '1px solid #bebeb8',
-                      }}
-                    />
-                  </Box>
+                  <SignupForm />
+                  <SocialIcons />
                 </Box>
               </Box>
             </Box>
