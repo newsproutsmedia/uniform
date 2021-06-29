@@ -7,13 +7,7 @@ const theme = {
       grey: '#474645',
       purple: '#8566cc',
       white: '#fafaf9',
-    },
-    font: {
-      family: 'Proxima Nova',
-      size: '18px',
-      webkitFontSmoothing: 'antialiased',
-      mozOsxFontSmoothing: 'grayscale',
-      textRendering: 'optimizelegibility',
+      brand: '#474645',
     },
   },
 };

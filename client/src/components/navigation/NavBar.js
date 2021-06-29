@@ -8,8 +8,8 @@ import {
   Header,
   ResponsiveContext,
 } from 'grommet';
-
 import { Menu as MenuIcon } from 'grommet-icons';
+import MenuList from './MenuList';
 import theme from '../../theme';
 
 function NavBar({ menu, setMenuState }) {
@@ -34,18 +34,10 @@ function NavBar({ menu, setMenuState }) {
           ) : (
             <>
               <Box justify="start" direction="row" gap="medium">
-                <Anchor href="https://v2.grommet.io/" label="Grommet.io" />
-                <Anchor
-                  href="https://github.com/grommet/grommet/issues"
-                  label="Feedback"
-                />
+                <MenuList items={['Product', 'Customers', 'Enterprise', 'Pricing']} />
               </Box>
               <Box justify="end" direction="row" gap="medium">
-                <Anchor href="https://v2.grommet.io/" label="Grommet.io" />
-                <Anchor
-                  href="https://github.com/grommet/grommet/issues"
-                  label="Feedback"
-                />
+                <MenuList items={['Help', 'Get started for free', 'Sign in']} />
               </Box>
             </>
           ))}
