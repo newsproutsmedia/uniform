@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import {
   Box,
+  Button,
   Grommet,
+  Heading,
   ResponsiveContext,
 } from 'grommet';
+import { Google } from 'grommet-icons';
 import { Helmet } from 'react-helmet';
 import MenuOverlay from './components/navigation/MenuOverlay';
 import NavBar from './components/navigation/NavBar';
@@ -158,6 +161,37 @@ function App() {
                       <TotalNPS />
                       <Spacer />
                     </Box>
+                  </Box>
+                </Box>
+                <Box
+                  background="#ffffff"
+                  width={{ max: '956px' }}
+                  height={{ min: '300px' }}
+                  pad={{
+                    top: '2em',
+                    bottom: '2em',
+                  }}
+                  margin={{
+                    bottom: '2em',
+                  }}
+                  direction="column"
+                  justify="top"
+                >
+                  <Heading level="2" textAlign="center" style={{ fontWeight: '400', fontSize: '30px' }}>Interested in improving your customer experience with NPS?</Heading>
+                  <Box
+                    direction="row"
+                    justify="center"
+                  >
+                    <Button
+                      icon={<Google />}
+                      label="Sign up with Google"
+                      gap="small"
+                      pad={{ vertical: '10px', horizontal: '10px' }}
+                      background="#ffffff"
+                      style={{
+                        border: '1px solid #bebeb8',
+                      }}
+                    />
                   </Box>
                 </Box>
               </Box>
