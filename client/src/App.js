@@ -8,8 +8,20 @@ import { Helmet } from 'react-helmet';
 import MenuOverlay from './components/navigation/MenuOverlay';
 import NavBar from './components/navigation/NavBar';
 import Introduction from './components/text/Introduction';
-import SectionPlacard from './components/calculator/SectionPlacard';
 import theme from './theme';
+import pageText from './config/page.text';
+import SectionPlacard from './components/calculator/SectionPlacard';
+import CalculatorGroupInstructions from './components/calculator/CalculatorGroupInstructions';
+import CountPositive from './components/calculator/CountPositive';
+import CountNeutral from './components/calculator/CountNeutral';
+import CountNegative from './components/calculator/CountNegative';
+import GroupPositive from './components/calculator/GroupPositive';
+import GroupNeutral from './components/calculator/GroupNeutral';
+import GroupNegative from './components/calculator/GroupNegative';
+import TotalPositive from './components/calculator/TotalPositive';
+import TotalNegative from './components/calculator/TotalNegative';
+import Spacer from './components/calculator/Spacer';
+import TotalNPS from './components/calculator/TotalNPS';
 
 function App() {
   const [showMenu, setShowMenu] = useState();
@@ -33,24 +45,119 @@ function App() {
             >
               <MenuOverlay menu={showMenu} setMenuState={setShowMenu} />
               <Box flex align="center" justify="start">
-                <Introduction />
+                <Introduction
+                  heading={pageText.introduction.heading}
+                  text={pageText.introduction.text}
+                />
                 <Box
                   fill
-                  height={{ min: '600px' }}
+                  height={{ min: '900px' }}
                   direction="row"
+                  justify="center"
                   border={{ color: 'frappe', size: '1px', style: 'solid', side: 'horizontal' }}
                   pad={{ bottom: '5em' }}
                   background="cream"
-                  justify="center"
                 >
                   <Box
-                    justify="start"
                     width={{ max: '956px' }}
-                    direction="row"
+                    direction="column"
+                    justify="top"
                     pad="0px"
                     margin="0px"
                   >
-                    <SectionPlacard>NPS CALCULATOR</SectionPlacard>
+                    <Box
+                      width="100%"
+                      direction="row"
+                      justify="center"
+                    >
+                      <SectionPlacard>NPS CALCULATOR</SectionPlacard>
+                    </Box>
+                    <Box
+                      id="countResponses"
+                      width="100%"
+                      height="280px"
+                      direction="row"
+                      justify="center"
+                      gap="10px"
+                      pad={{
+                        top: '4em',
+                        bottom: '0px',
+                      }}
+                      border={{
+                        color: theme.global.colors.dorian,
+                        size: '1px',
+                        style: 'solid',
+                        side: 'bottom',
+                      }}
+                      style={{
+                        position: 'relative',
+                        top: '0px',
+                      }}
+                    >
+                      <CalculatorGroupInstructions
+                        heading={pageText.calculator.count.heading}
+                        text={pageText.calculator.count.text}
+                      />
+                      <CountPositive />
+                      <CountNeutral />
+                      <CountNegative />
+                    </Box>
+                    <Box
+                      id="groupResponses"
+                      width="100%"
+                      height="250px"
+                      direction="row"
+                      justify="center"
+                      gap="10px"
+                      pad={{
+                        top: '2.2em',
+                        bottom: '0px',
+                      }}
+                      border={{
+                        color: theme.global.colors.dorian,
+                        size: '1px',
+                        style: 'solid',
+                        side: 'bottom',
+                      }}
+                      style={{
+                        position: 'relative',
+                        top: '0px',
+                      }}
+                    >
+                      <CalculatorGroupInstructions
+                        heading={pageText.calculator.group.heading}
+                        text={pageText.calculator.group.text}
+                      />
+                      <GroupPositive />
+                      <GroupNeutral />
+                      <GroupNegative />
+                    </Box>
+                    <Box
+                      id="calculateTotals"
+                      width="100%"
+                      height="280px"
+                      direction="row"
+                      justify="center"
+                      gap=".2em"
+                      pad={{
+                        top: '2.2em',
+                        bottom: '0px',
+                      }}
+                      style={{
+                        position: 'relative',
+                        top: '0px',
+                      }}
+                    >
+                      <CalculatorGroupInstructions
+                        heading={pageText.calculator.calculate.heading}
+                        text={pageText.calculator.calculate.text}
+                      />
+                      <Spacer />
+                      <TotalPositive />
+                      <TotalNegative />
+                      <TotalNPS />
+                      <Spacer />
+                    </Box>
                   </Box>
                 </Box>
               </Box>

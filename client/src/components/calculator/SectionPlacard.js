@@ -16,6 +16,7 @@ function SectionPlacard({ children }) {
   return (
     <Grommet theme={theme}>
       <Box
+        width={{ max: '142px' }}
         direction="row"
         justify="center"
         background="purple"

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   Box,
   Grommet,
@@ -7,7 +8,7 @@ import {
 } from 'grommet';
 import theme from '../../theme';
 
-function Introduction() {
+function Introduction({ heading, text }) {
   const headingStyle = {
     fontWeight: '350',
     marginBottom: '8px',
@@ -25,16 +26,10 @@ function Introduction() {
         margin={{ bottom: '4em' }}
       >
         <Heading size="2em" align="center" style={headingStyle}>
-          Calculate your NPS® (Net Promoter Score)
+          {heading}
         </Heading>
         <Paragraph align="center" alignSelf="center" textAlign="center" fill style={textStyle}>
-          Calculating your NPS score is as simple as tallying up your responses
-          and subtracting the percentage of detractors from the percentage of promoters.
-          The score is a whole number that ranges from -100 to 100, and indicates customer
-          happiness with your brand experience.
-          <br />
-          <br />
-          Use the calculator below to calculate your NPS from your survey responses.
+          {text}
         </Paragraph>
       </Box>
     </Grommet>
@@ -42,3 +37,8 @@ function Introduction() {
 }
 
 export default Introduction;
+
+Introduction.propTypes = {
+  heading: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+};
