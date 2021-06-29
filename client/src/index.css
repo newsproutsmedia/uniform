@@ -1,7 +1,8 @@
 body {
-  font-family: 'proxima-nova','Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-family: 'Proxima Nova','Helvetica Neue',Helvetica,Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizelegibility;
   font-weight: normal;
+  background-color: #ffffff;
 }

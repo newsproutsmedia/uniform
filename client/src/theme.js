@@ -2,12 +2,14 @@ const theme = {
   global: {
     colors: {
       blue: '#1E94E8',
-      red: '#c22b00',
+      brand: '#474645',
+      cream: '#FAFAF9',
       green: '#728200',
       grey: '#474645',
+      frappe: '#e0e0d9',
       purple: '#8566cc',
-      white: '#fafaf9',
-      brand: '#474645',
+      red: '#c22b00',
+      white: '#ffffff',
     },
   },
 };
