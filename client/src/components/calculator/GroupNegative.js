@@ -3,8 +3,9 @@ import {
   Box,
   Grommet,
 } from 'grommet';
+import { getNegativeTotal } from '../../data/selectors';
 import CalculatorGroupContainer from './CalculatorGroupContainer';
-import DataInput from './DataInput';
+import DataTotal from './DataTotal';
 import theme from '../../theme';
 import negativeGroupBracket from './groupConnectorNegative.png';
 import Icon from './Icon';
@@ -34,7 +35,7 @@ function GroupNegative() {
               }}
               gap="12px"
             >
-              <DataInput label="Total" />
+              <DataTotal label="Total" selector={getNegativeTotal} />
             </Box>
           </CalculatorGroupContainer>
           <Box

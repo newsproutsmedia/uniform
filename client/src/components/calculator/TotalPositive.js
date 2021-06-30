@@ -5,10 +5,13 @@ import {
   Heading,
   Text,
 } from 'grommet';
+import { useRecoilValue } from 'recoil';
+import { getPositivePercent } from '../../data/selectors';
 import CalculatorGroupContainer from './CalculatorGroupContainer';
 import theme from '../../theme';
 
 function TotalPositive() {
+  const posPercent = useRecoilValue(getPositivePercent);
   return (
     <Grommet theme={theme}>
       <Box
@@ -40,7 +43,10 @@ function TotalPositive() {
                   bottom: '20px',
                 }}
               >
-                <Heading level="3" textAlign="center" style={{ marginBottom: '0px' }}>0%</Heading>
+                <Heading level="3" textAlign="center" style={{ marginBottom: '0px' }}>
+                  {posPercent}
+                  %
+                </Heading>
                 <Text textAlign="center" size="small">of total responses</Text>
               </Box>
             </Box>
