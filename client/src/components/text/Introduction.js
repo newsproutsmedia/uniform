@@ -21,7 +21,7 @@ function Introduction({ heading, text, text2 }) {
   return (
     <Grommet theme={theme}>
       <Box
-        width={{ max: '750px' }}
+        width={{ max: '820px' }}
         alignContent="center"
         align="center"
         justify="start"
