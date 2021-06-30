@@ -45,10 +45,6 @@ function MenuOverlay({ menu, setMenuState }) {
 export default MenuOverlay;
 
 MenuOverlay.propTypes = {
-  menu: PropTypes.string,
+  menu: PropTypes.string.isRequired,
   setMenuState: PropTypes.func.isRequired,
-};
-
-MenuOverlay.defaultProps = {
-  menu: 'menu',
 };
