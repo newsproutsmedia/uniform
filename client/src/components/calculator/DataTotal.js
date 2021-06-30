@@ -40,5 +40,5 @@ export default DataTotal;
 
 DataTotal.propTypes = {
   label: PropTypes.string.isRequired,
-  selector: PropTypes.objectOf(PropTypes.object).isRequired,
+  selector: PropTypes.objectOf(PropTypes.string).isRequired,
 };

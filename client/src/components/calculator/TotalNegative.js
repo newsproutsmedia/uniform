@@ -26,7 +26,6 @@ function TotalNegative() {
         <Box
           width="106px"
           direction="column"
-          justify="top"
         >
           <CalculatorGroupContainer type="negative">
             <Box

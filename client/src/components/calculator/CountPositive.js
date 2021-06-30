@@ -16,7 +16,6 @@ function CountPositive() {
       <Box
         width="148px"
         direction="column"
-        justify="top"
       >
         <CalculatorGroupContainer type="positive">
           <Box

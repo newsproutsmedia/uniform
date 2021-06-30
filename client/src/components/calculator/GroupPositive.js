@@ -21,7 +21,6 @@ function GroupPositive() {
         <Box
           width="106px"
           direction="column"
-          justify="top"
         >
           <CalculatorGroupContainer type="positive">
             <Box

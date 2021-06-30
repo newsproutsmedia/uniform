@@ -30,7 +30,7 @@ function DataInput({ label, atom }) {
         justify="end"
       >
         <Text>{label}</Text>
-        <TextInput textAlign="center" focusIndicator="false" style={inputStyle} onChange={handleUpdate} />
+        <TextInput textAlign="center" style={inputStyle} onChange={handleUpdate} />
       </Box>
     </Grommet>
   );

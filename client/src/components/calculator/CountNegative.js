@@ -16,7 +16,6 @@ function CountNegative() {
       <Box
         width="444px"
         direction="column"
-        justify="top"
       >
         <CalculatorGroupContainer type="negative">
           <Box

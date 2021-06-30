@@ -1,10 +1,8 @@
 export const addResponses = (responses) => {
-  console.log(`Add responses ${responses.length} responses of type ${responses[0].type}`);
   let total = 0;
   responses.forEach((response) => {
     total += response.value;
   });
-  console.log(`Add responses ${total}`);
   return total;
 };
 

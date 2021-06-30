@@ -19,7 +19,6 @@ function GroupNeutral() {
         <Box
           width="106px"
           direction="column"
-          justify="top"
         >
           <CalculatorGroupContainer type="neutral">
             <Box

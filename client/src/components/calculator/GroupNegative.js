@@ -21,7 +21,7 @@ function GroupNegative() {
         <Box
           width="106px"
           direction="column"
-          justify="top"
+          aligns="top"
         >
           <CalculatorGroupContainer type="negative">
             <Box

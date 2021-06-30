@@ -51,6 +51,7 @@ function App() {
                 <Introduction
                   heading={pageText.introduction.heading}
                   text={pageText.introduction.text}
+                  text2={pageText.introduction.text2}
                 />
                 <Box
                   fill
@@ -64,7 +65,6 @@ function App() {
                   <Box
                     width={{ max: '956px' }}
                     direction="column"
-                    justify="top"
                     pad="0px"
                     margin="0px"
                   >
@@ -175,7 +175,6 @@ function App() {
                     bottom: '2em',
                   }}
                   direction="column"
-                  justify="top"
                 >
                   <Heading level="2" textAlign="center" style={{ fontWeight: '400', fontSize: '30px' }}>Interested in improving your customer experience with NPS?</Heading>
                   <SignupForm />

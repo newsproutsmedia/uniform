@@ -4,8 +4,8 @@ const pageText = {
     text: 'Calculating your NPS score is as simple as tallying up your responses '
     + 'and subtracting the percentage of detractors from the percentage of promoters.'
     + 'The score is a whole number that ranges from -100 to 100, and indicates customer '
-    + 'happiness with your brand experience. <br /><br />'
-    + 'Use the calculator below to calculate your NPS from your survey responses.',
+    + 'happiness with your brand experience.<br><br>',
+    text2: 'Use the calculator below to calculate your NPS from your survey responses.',
   },
   calculator: {
     count: {

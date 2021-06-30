@@ -22,7 +22,6 @@ function TotalNPS() {
         <Box
           width="106px"
           direction="column"
-          justify="top"
         >
           <CalculatorGroupContainer type="total">
             <Box

@@ -7,7 +7,6 @@ export const getPositiveTotal = selector({
   get: async ({ get }) => {
     const responses = [{ ...get(pos1Atom) }, { ...get(pos2Atom) }];
     const total = await getTotalResponses(responses);
-    console.log(total);
     return total;
   },
 });

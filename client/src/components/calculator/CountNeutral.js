@@ -16,7 +16,6 @@ function CountNeutral() {
       <Box
         width="148px"
         direction="column"
-        justify="top"
       >
         <CalculatorGroupContainer type="neutral">
           <Box
