@@ -50,10 +50,6 @@ function NavBar({ menu, setMenuState }) {
 export default NavBar;
 
 NavBar.propTypes = {
-  menu: PropTypes.bool,
+  menu: PropTypes.bool.isRequired,
   setMenuState: PropTypes.func.isRequired,
-};
-
-NavBar.defaultProps = {
-  menu: false,
 };
