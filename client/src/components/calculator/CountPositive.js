@@ -3,6 +3,7 @@ import {
   Box,
   Grommet,
 } from 'grommet';
+import { pos1Atom, pos2Atom } from '../../data/atoms';
 import CalculatorGroupContainer from './CalculatorGroupContainer';
 import DataInput from './DataInput';
 import theme from '../../theme';
@@ -15,7 +16,6 @@ function CountPositive() {
       <Box
         width="148px"
         direction="column"
-        justify="top"
       >
         <CalculatorGroupContainer type="positive">
           <Box
@@ -29,8 +29,8 @@ function CountPositive() {
             }}
             gap="12px"
           >
-            <DataInput label="10" />
-            <DataInput label="9" />
+            <DataInput label="10" id="pos1" key="pos1" atom={pos1Atom} />
+            <DataInput label="9" id="pos2" key="pos2" atom={pos2Atom} />
           </Box>
         </CalculatorGroupContainer>
         <Box

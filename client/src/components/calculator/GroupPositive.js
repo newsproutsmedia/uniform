@@ -3,8 +3,9 @@ import {
   Box,
   Grommet,
 } from 'grommet';
+import { getPositiveTotal } from '../../data/selectors';
 import CalculatorGroupContainer from './CalculatorGroupContainer';
-import DataInput from './DataInput';
+import DataTotal from './DataTotal';
 import theme from '../../theme';
 import positiveGroupBracket from './groupConnectorPositive.png';
 import Icon from './Icon';
@@ -20,7 +21,6 @@ function GroupPositive() {
         <Box
           width="106px"
           direction="column"
-          justify="top"
         >
           <CalculatorGroupContainer type="positive">
             <Box
@@ -34,7 +34,7 @@ function GroupPositive() {
               }}
               gap="12px"
             >
-              <DataInput label="Total" />
+              <DataTotal label="Total" type="total" selector={getPositiveTotal} />
             </Box>
           </CalculatorGroupContainer>
           <Box

@@ -5,10 +5,13 @@ import {
   Heading,
   Text,
 } from 'grommet';
+import { useRecoilValue } from 'recoil';
+import { getTotalScore } from '../../data/selectors';
 import CalculatorGroupContainer from './CalculatorGroupContainer';
 import theme from '../../theme';
 
 function TotalNPS() {
+  const npsScore = useRecoilValue(getTotalScore);
   return (
     <Grommet theme={theme}>
       <Box
@@ -19,7 +22,6 @@ function TotalNPS() {
         <Box
           width="106px"
           direction="column"
-          justify="top"
         >
           <CalculatorGroupContainer type="total">
             <Box
@@ -40,7 +42,7 @@ function TotalNPS() {
                   bottom: '20px',
                 }}
               >
-                <Heading level="3" textAlign="center" style={{ marginBottom: '0px' }}>0</Heading>
+                <Heading level="3" textAlign="center" style={{ marginBottom: '0px' }}>{npsScore}</Heading>
                 <Text textAlign="center" size="small">This is your NPS</Text>
               </Box>
             </Box>

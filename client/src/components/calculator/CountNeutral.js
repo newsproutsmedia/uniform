@@ -3,6 +3,7 @@ import {
   Box,
   Grommet,
 } from 'grommet';
+import { neut1Atom, neut2Atom } from '../../data/atoms';
 import CalculatorGroupContainer from './CalculatorGroupContainer';
 import DataInput from './DataInput';
 import theme from '../../theme';
@@ -15,7 +16,6 @@ function CountNeutral() {
       <Box
         width="148px"
         direction="column"
-        justify="top"
       >
         <CalculatorGroupContainer type="neutral">
           <Box
@@ -29,8 +29,8 @@ function CountNeutral() {
             }}
             gap="12px"
           >
-            <DataInput label="8" />
-            <DataInput label="7" />
+            <DataInput label="8" id="neut1" key="neut1" atom={neut1Atom} />
+            <DataInput label="7" id="neut2" key="neut2" atom={neut2Atom} />
           </Box>
         </CalculatorGroupContainer>
         <Box

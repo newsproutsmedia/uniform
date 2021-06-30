@@ -5,10 +5,13 @@ import {
   Heading,
   Text,
 } from 'grommet';
+import { useRecoilValue } from 'recoil';
+import { getNegativePercent } from '../../data/selectors';
 import CalculatorGroupContainer from './CalculatorGroupContainer';
 import theme from '../../theme';
 
 function TotalNegative() {
+  const negPercent = useRecoilValue(getNegativePercent);
   return (
     <Grommet theme={theme}>
       <Box
@@ -23,7 +26,6 @@ function TotalNegative() {
         <Box
           width="106px"
           direction="column"
-          justify="top"
         >
           <CalculatorGroupContainer type="negative">
             <Box
@@ -47,7 +49,10 @@ function TotalNegative() {
                   bottom: '20px',
                 }}
               >
-                <Heading level="3" textAlign="center" style={{ marginBottom: '0px' }}>0%</Heading>
+                <Heading level="3" textAlign="center" style={{ marginBottom: '0px' }}>
+                  {negPercent}
+                  %
+                </Heading>
                 <Text textAlign="center" size="small">of total responses</Text>
               </Box>
             </Box>

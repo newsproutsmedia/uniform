@@ -55,7 +55,6 @@ function CalculatorGroupContainer({ type, children }) {
         }}
         style={{ color: groupType[type].color }}
         direction="column"
-        justify="top"
       >
         <Box
           width="100%"

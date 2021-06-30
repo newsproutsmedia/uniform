@@ -3,6 +3,7 @@ import {
   Box,
   Grommet,
 } from 'grommet';
+import { neg1Atom, neg2Atom, neg3Atom, neg4Atom, neg5Atom, neg6Atom, neg7Atom } from '../../data/atoms';
 import CalculatorGroupContainer from './CalculatorGroupContainer';
 import DataInput from './DataInput';
 import theme from '../../theme';
@@ -15,7 +16,6 @@ function CountNegative() {
       <Box
         width="444px"
         direction="column"
-        justify="top"
       >
         <CalculatorGroupContainer type="negative">
           <Box
@@ -29,13 +29,13 @@ function CountNegative() {
             }}
             gap="12px"
           >
-            <DataInput label="6" />
-            <DataInput label="5" />
-            <DataInput label="4" />
-            <DataInput label="3" />
-            <DataInput label="2" />
-            <DataInput label="1" />
-            <DataInput label="0" />
+            <DataInput label="6" id="neg1" atom={neg1Atom} />
+            <DataInput label="5" id="neg2" atom={neg2Atom} />
+            <DataInput label="4" id="neg3" atom={neg3Atom} />
+            <DataInput label="3" id="neg4" atom={neg4Atom} />
+            <DataInput label="2" id="neg5" atom={neg5Atom} />
+            <DataInput label="1" id="neg6" atom={neg6Atom} />
+            <DataInput label="0" id="neg7" atom={neg7Atom} />
           </Box>
         </CalculatorGroupContainer>
         <Box

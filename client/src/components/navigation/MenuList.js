@@ -26,6 +26,7 @@ function MenuList({ items }) {
     return result.items
       ? (
         <Menu
+          key={result.key}
           label={result.label}
           href={result.url}
           items={result.items}

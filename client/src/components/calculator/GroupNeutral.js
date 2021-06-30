@@ -3,8 +3,9 @@ import {
   Box,
   Grommet,
 } from 'grommet';
+import { getNeutralTotal } from '../../data/selectors';
 import CalculatorGroupContainer from './CalculatorGroupContainer';
-import DataInput from './DataInput';
+import DataTotal from './DataTotal';
 import theme from '../../theme';
 
 function GroupNeutral() {
@@ -18,7 +19,6 @@ function GroupNeutral() {
         <Box
           width="106px"
           direction="column"
-          justify="top"
         >
           <CalculatorGroupContainer type="neutral">
             <Box
@@ -32,7 +32,7 @@ function GroupNeutral() {
               }}
               gap="12px"
             >
-              <DataInput label="Total" />
+              <DataTotal label="Total" selector={getNeutralTotal} />
             </Box>
           </CalculatorGroupContainer>
         </Box>
